@@ -1,0 +1,169 @@
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #FEA116;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #F1F8FF;
+    --bs-dark: #0F172B;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255,255,255,0.15), rgba(255,255,255,0));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--bs-cyan);
+}
+
+.hero {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../IMAGES/banniere.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 244, 244);
+}
+
+.banniere {
+    padding: 150px;
+}
+
+.banniere h1 {
+    font-size: 3em;
+}
+
+.banniere h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.footer {
+    background-color: #d6c611;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Pour s'adapter aux petites tailles d'écran */
+}
+
+.footer-section {
+    width: 24%;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 5px;
+    margin-bottom: 10px; /* Pour ajouter un peu d'espacement sur mobile */
+}
+
+.newsletter-form button {
+    padding: 5px 10px;
+    background-color: #25c6be;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover {
+    background-color: #db2525;
+}
+
+/* Media Queries pour la responsivité */
+
+/* Petits appareils (max-width: 768px) */
+@media (max-width: 768px) {
+    .hero {
+        height: 600px;
+    }
+
+    .banniere {
+        padding: 100px;
+    }
+
+    .banniere h1 {
+        font-size: 2em;
+    }
+
+    .banniere h2 {
+        font-size: 1.2em;
+    }
+
+    .footer-section {
+        width: 100%; /* Les sections prennent toute la largeur sur petits écrans */
+        margin-bottom: 20px;
+    }
+
+    .container img {
+        height: 200px; /* Réduction de la hauteur des images sur les petits écrans */
+    }
+}
+
+/* Très petits appareils (max-width: 576px) */
+@media (max-width: 576px) {
+    .hero {
+        height: 500px;
+    }
+
+    .banniere {
+        padding: 80px;
+    }
+
+    .banniere h1 {
+        font-size: 1.5em;
+    }
+
+    .banniere h2 {
+        font-size: 1em;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        margin-bottom: 15px;
+    }
+}
